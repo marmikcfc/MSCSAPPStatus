@@ -8,6 +8,11 @@ Currently it supports the following universities:
 + Virginia Tech.
 + North Eastern
 + TAMU
++ UCSD
++ USC
++ UFL
++ UCI
++ UNC CHAPPEL HILL
 
 Python Requirements:
 + [Mechanize](https://pypi.python.org/pypi/mechanize/)
