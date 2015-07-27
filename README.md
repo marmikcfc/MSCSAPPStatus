@@ -13,6 +13,7 @@ Currently it supports the following universities:
 + UFL
 + UCI
 + UNC CHAPPEL HILL
++ University of Virginia
 
 Python Requirements:
 + [Mechanize](https://pypi.python.org/pypi/mechanize/)
