@@ -1,7 +1,3 @@
-MSCSAPPStatus/allCombined.py
-@marmikcfcmarmikcfc 12 minutes ago Added UNC Chappel Hill
-4 contributors @sjs7007 @marmikcfc @Hell-91 @vishnukarthikl
-RawBlameHistory     209 lines (172 sloc)  6.858 kb
 import threading
 import time
 import sys
@@ -49,7 +45,7 @@ def getResult(universityName,url,userName,password):
         b.select_form(nr=1)
         b["aemail"]=userName
         b["apass"]=password
-    elif(universityName=="USC" or universityName=="UNC"):
+    elif(universityName=="USC" or universityName=="UNC" or universityName=="UVA" ):
         b.select_form(nr=0)
         b["UserID"]=userName
         b["Password"]=password
@@ -94,7 +90,7 @@ def getResult(universityName,url,userName,password):
     elif(universityName=="vtech"):
         result= s[s.find('tableBottomBorder">')+1:s.find('<br><div class="info">')]
         result=result[-9:]
-    elif(universityName=="USC" or universityName=="UNC"):
+    elif(universityName=="USC" or universityName=="UNC" or universityName=="UVA"):
         result= s[s.find("Status")+1:s.find(" <img")]
         result=result[7:]
     elif(universityName=="NEU"):
@@ -141,8 +137,8 @@ def processNEUResult(result) :
 purdueUserName=""
 purduePass=""
 
-asuUserName=""
-asuPass=""
+asuUserName="mkpandya"
+asuPass="Marmik_9212"
 
 sunySBUserName=""
 sunySBPass=""
@@ -173,6 +169,10 @@ uciPass=""
 uncUserName=""
 uncPass=""
 
+#UVA pin and password
+uvaUserName="marmikcfc"
+uvaPass="Marmik@92"
+
 
 class myThread (threading.Thread):
     def __init__(self, threadID, universityName, url, userName, password):
@@ -197,6 +197,8 @@ thread8 = myThread(8,"USC","https://app.applyyourself.com/AYApplicantLogin/fl_Ap
 thread9 = myThread(9,"UFL","https://www.cise.ufl.edu/academics/grad/prospective/gait/index.php",uflUserName,uflPass)
 thread10 = myThread(10,"UCI","https://gats.ics.uci.edu/tracker/",uciUserName,uciPass)
 thread11 = myThread(11,"UNC","https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantLogin.asp?id=unc-ch",uncUserName,uncPass)
+thread12 = myThread(12,"UVA","https://app.applyyourself.com/AYApplicantLogin/fl_ApplicantConnectLogin.asp?id=uva-eng",uvaUserName,uvaPass)
+
 
 # Start new Threads
 thread1.start()
@@ -210,3 +212,4 @@ thread8.start()
 thread9.start()
 thread10.start()
 thread11.start()
+thread12.start()
