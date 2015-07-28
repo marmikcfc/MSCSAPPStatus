@@ -137,8 +137,8 @@ def processNEUResult(result) :
 purdueUserName=""
 purduePass=""
 
-asuUserName="mkpandya"
-asuPass="Marmik_9212"
+asuUserName=""
+asuPass=""
 
 sunySBUserName=""
 sunySBPass=""
@@ -170,8 +170,8 @@ uncUserName=""
 uncPass=""
 
 #UVA pin and password
-uvaUserName="marmikcfc"
-uvaPass="Marmik@92"
+uvaUserName=""
+uvaPass=""
 
 
 class myThread (threading.Thread):
